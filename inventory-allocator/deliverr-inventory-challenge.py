@@ -56,37 +56,37 @@ def testSolution ():
     #test 0, single item desired from single warehouse
     target = {'apple': 5}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5}}]
-    print ("Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 0\n Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
     #test 1, single item from single warehouse with multiple items
     target = {'apple': 4}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 3}}]
-    print ("Desired Answer: [{'name': 'owd', 'inventory': {'apple': 4}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 1\n Desired Answer: [{'name': 'owd', 'inventory': {'apple': 4}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
     #test 2, multiple items from single warehouse with multiple items
     target = {'apple': 5, 'banana':2}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 3}}]
-    print ("Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 2}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 2\n Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 2}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
     #test 3, single item across multiple warehouses
     target = {'apple': 6}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 3}}, {'name': 'dwt', 'inventory': {'apple': 3, 'banana': 3}}]
-    print ("Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5}}, {'name': 'dwt', 'inventory': {'apple': 1}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 3\n Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5}}, {'name': 'dwt', 'inventory': {'apple': 1}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
     #test 4, multiple items across multiple warehouses with many items
     target = {'apple': 6, 'banana': 7}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 5}}, {'name': 'dwt', 'inventory': {'apple': 3, 'banana': 3}}]
-    print ("Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5, 'banana':5}}, {'name': 'dwt', 'inventory': {'apple': 1, 'banana': 2}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 4\n Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5, 'banana':5}}, {'name': 'dwt', 'inventory': {'apple': 1, 'banana': 2}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
     #test 5, try with an invalid input
     target = {'apple': 99, 'banana': 99}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5, 'banana': 5}}, {'name': 'dwt', 'inventory': {'apple': 3, 'banana': 3}}]
-    print ("Desired Answer: [] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 5\n Desired Answer: [] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
     #test 6, grabbing each item from a different warehouse
     target = {'apple': 6, 'banana': 7, 'potato':3}
     warehouses = [{'name': 'owd', 'inventory': {'apple': 5}}, {'name': 'dwt', 'inventory': {'potato': 2}}, {'name': 'abc', 'inventory': {'banana': 6}}, {'name': 'xyz', 'inventory': {'potato': 1, 'apple':1,'banana': 1}}]
-    print ("Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5}}, {'name': 'dwt', 'inventory': {'potato': 2}}, {'name': 'abc', 'inventory': {'banana': 6}}, {'name': 'xyz', 'inventory': {'potato': 1, 'apple': 1, 'banana': 1}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
+    print ("Test 6\n Desired Answer: [{'name': 'owd', 'inventory': {'apple': 5}}, {'name': 'dwt', 'inventory': {'potato': 2}}, {'name': 'abc', 'inventory': {'banana': 6}}, {'name': 'xyz', 'inventory': {'potato': 1, 'apple': 1, 'banana': 1}}] \n\tSolution's Answer: "+ str(findBestShipment(target, warehouses)))
 
 #run tests
 testSolution()
